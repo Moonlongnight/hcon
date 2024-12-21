@@ -22,6 +22,7 @@ vector<vector<double>> generateEnergyMap(const vector<vector<int>>& A) {
         for (int j = 0; j < m; ++j) {
             if (A[i][j] == 1) {  // 如果当前位置是1
                 // 为当前位置分配能量并向周围扩散
+                B[i][j]+=0.311;
                 for (const auto& dir : directions) {
                     int ni = i + dir.first;
                     int nj = j + dir.second;
